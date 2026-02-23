@@ -1,0 +1,20 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "http://estudiolalenera.com/*"
+  to = "https://www.estudiolalenera.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://estudiolalenera.com/*"
+  to = "https://www.estudiolalenera.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.estudiolalenera.com/*"
+  to = "https://www.estudiolalenera.com/:splat"
+  status = 301
+  force = true
