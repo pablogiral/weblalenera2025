@@ -23,3 +23,26 @@
 #header nav ul {
   overflow: hidden;
 }
+
+@media screen and (min-width: 481px) {
+  /* Keep all nav cells identical so hover fits each box exactly */
+  #header nav ul li {
+    flex: 1 1 0;
+  }
+
+  #header nav ul li a {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    padding: 0 1.25rem;
+  }
+
+  /* Disable template's artificial center divider for even menus */
+  #header nav.use-middle:after {
+    display: none;
+  }
+
+  #header nav.use-middle ul li.is-middle {
+    border-left: solid 1px #ffffff;
+  }
+}
