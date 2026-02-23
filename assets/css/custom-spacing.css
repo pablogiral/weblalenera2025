@@ -18,3 +18,8 @@
     padding-bottom: 0.5rem !important;
   }
 }
+
+/* Keep nav hover background clipped to the menu frame */
+#header nav ul {
+  overflow: hidden;
+}
