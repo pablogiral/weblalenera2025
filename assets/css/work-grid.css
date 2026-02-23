@@ -1,0 +1,58 @@
+/* Grid de trabajos en la sección Work */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.6rem;
+  margin-top: 2rem;
+  max-height: none;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+.work-item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: auto;
+}
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.work-item .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.work-item:hover .overlay {
+  opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+  .work-item {
+    width: 120px;
+    height: 120px;
+  }
+  .work-item .overlay {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+}
