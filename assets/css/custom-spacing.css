@@ -99,10 +99,32 @@
 }
 
 @media screen and (max-width: 480px) {
+  #header nav {
+    width: clamp(11rem, 36vw, 14rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #header nav ul {
+    min-width: 0;
+  }
+
   #header nav ul li a {
     height: 3rem;
     line-height: 3rem;
     letter-spacing: 0.1rem;
     font-size: 0.68rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  /* Allow long section titles to wrap inside article container on mobile */
+  #main article h2.major {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    letter-spacing: 0.2rem;
   }
 }
