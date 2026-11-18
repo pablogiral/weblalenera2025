@@ -24,6 +24,9 @@
   object-fit: cover;
   display: block;
 }
+.work-item .work-cover-white {
+  background-color: #fff;
+}
 .work-item .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
