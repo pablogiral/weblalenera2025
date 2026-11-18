@@ -78,6 +78,20 @@
 					if ($article.length == 0)
 						return;
 
+				if (id === 'work') {
+					var $grid = $article.find('.work-grid'),
+						cards = $grid.children('.work-item').get();
+
+					for (var i = cards.length - 1; i > 0; i--) {
+						var j = Math.floor(Math.random() * (i + 1)),
+							card = cards[i];
+						cards[i] = cards[j];
+						cards[j] = card;
+					}
+
+					$grid.append(cards);
+				}
+
 				// Handle lock.
 
 					// Already locked? Speed through "show" steps w/o delays.

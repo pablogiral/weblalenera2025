@@ -41,6 +41,36 @@
 .work-item:hover .overlay {
   opacity: 1;
 }
+.work-item .work-link {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  border-bottom: 0;
+}
+.work-item .work-link .icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.78);
+  font-size: 14px;
+}
+.work-item .work-link:hover .icon,
+.work-item .work-link:focus-visible .icon {
+  color: #222;
+  background: #fff;
+}
+.work-item .work-link:focus-visible {
+  outline: 2px solid #fff;
+  border-radius: 50%;
+}
 @media screen and (max-width: 600px) {
   .work-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
